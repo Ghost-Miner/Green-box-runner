@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
-    public static bool IsPaused = false;
-    public GameObject pauseMenu;
-    public GameObject pauseButton;
+    public static bool IsPaused = false;	//variable to check state of the menu
+    public GameObject pauseMenu;			//The pause menu panel
+    public GameObject pauseButton;			//Pause button, currently unused and played outside the canvas
 
     void Start()
     {
-        //Debug.Log("SceneLoad TimeScale: " + Time.timeScale);
+        //Debug.Log("SceneLoad TimeScale: " + Time.timeScale); // Used for debugging, disabled.
     }
     void Update()
     {
@@ -27,9 +27,10 @@ public class PauseMenu : MonoBehaviour
                 Debug.Log("Paused");
             }
         }
-        //Debug.Log("GAME TIME: " + Time.timeScale);
+        //Debug.Log("GAME TIME: " + Time.timeScale); // Used for debugging, disabled.
     }
-
+	
+	//Resume game method
     public void Resume()
     {
         pauseMenu.SetActive(false);
@@ -38,6 +39,7 @@ public class PauseMenu : MonoBehaviour
         IsPaused = false;
     }
 
+	//Pause game method
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -45,7 +47,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         IsPaused = true;
     }
-
+	
+	//Quit to menu
     public void GoToMenu()
     {
         IsPaused = false;

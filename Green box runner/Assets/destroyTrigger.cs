@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class destroyTrigger : MonoBehaviour
 {
+	//
+	// CURRENTLY UNUSED - Used for testing obstacle spawn in "tests" scene.
+	//
+	
     public GameObject obstacleSpawn;
     public Transform ObstacleTransform;
 

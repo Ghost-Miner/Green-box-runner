@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class EndTrigger : MonoBehaviour
 {
-    public GameManager gameManager;
+    public GameManager gameManager;	//GameManager
 
-    public GameObject player;
+    public GameObject player;		//Player object
 
-    public GameObject loadingPanel;
+    public GameObject loadingPanel;	//loading Panel object
 
     public void OnTriggerEnter()
     {

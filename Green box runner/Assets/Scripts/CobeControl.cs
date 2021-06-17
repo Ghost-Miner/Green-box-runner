@@ -2,11 +2,11 @@
 
 public class CobeControl : MonoBehaviour
 {
-    public Rigidbody rb; //var for player object
-    public float forwardForce = 2000f; //how fast the player moves forward
-    public float sidewaysForce = 500f; //how fast the player moves sideways
+    public Rigidbody rb; 				//var for player object
+    public float forwardForce = 2000f; 	//how fast the player moves forward
+    public float sidewaysForce = 500f;  //how fast the player moves sideways
 
-    public Transform player2Tranf;
+    public Transform player2Tranf;		//Player duplicate, used for resetting rotation
 
     private void Start()
     {
@@ -15,6 +15,8 @@ public class CobeControl : MonoBehaviour
 
     void FixedUpdate()
     {
+		//CONTROLS
+		
         if (PauseMenu.IsPaused == false && Tutorial.TutorialClosed == true)
         {
             rb.AddForce(0, 0, forwardForce * Time.deltaTime);
@@ -35,8 +37,10 @@ public class CobeControl : MonoBehaviour
             }
         }
     }
+	
     void Update()
     {
+		//RESTART LEVEL
         if (Input.GetKeyDown("r"))
         {
             FindObjectOfType<GameManager>().Restart();

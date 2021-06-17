@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject loadingPanel;
+    public GameObject loadingPanel; 		//The loading box
 
     public void PlayGame()
     {

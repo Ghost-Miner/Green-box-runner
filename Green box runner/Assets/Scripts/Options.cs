@@ -5,12 +5,20 @@ using UnityEngine.UI;
 
 public class Options : MonoBehaviour
 {
-    //Resolution[] resolutions;
+	// 
+	// THIS SCRIPT CURRENTLY CONTROLS THE WHOLE OPTIONS MENU
+	//
+	
+    //Resolution[] resolutions; 			//List of all suported resolutions
 
-    public Dropdown resolutionDropdown;
+    public Dropdown resolutionDropdown;		//REsoltuion dropdown, disabled
 
     /*void start()
     {
+		//
+		// Resoltuion settings and stuff
+		//
+		
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -35,24 +43,28 @@ public class Options : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
+	//Resoltuion settings
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }*/
 
+	//Quality settings
     public void SetQuality(int qualityIndex)
     {
         Debug.Log("Quality:" + qualityIndex);
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
+	//Fullscreen setttings
     public void SetFullScreen(bool isFullscreen)
     {
         Debug.Log("Fullscreen:" + isFullscreen);
         Screen.fullScreen = isFullscreen;
     }
 
+	//Quit to menu
     public void BackToMenu()
     {
         Debug.Log("Returning to menu");

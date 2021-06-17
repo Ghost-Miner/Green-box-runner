@@ -2,7 +2,7 @@
 
 public class PlayerCollision : MonoBehaviour
 {
-    public CobeControl movement;
+    public CobeControl movement; // Player movement script
 
     void OnCollisionEnter (Collision collisionInfo)
     {

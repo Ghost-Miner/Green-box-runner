@@ -4,22 +4,28 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+	//
+	// THE MAIN SCRIPT OF THE GAME (besides CubeControl)
+	// Controls the game and lots of other stuff
+	//
+	
     #region Variables
     bool gameHasEnded = false;
 
     public float restartDelay = 1f;
-    public GameObject completeLevelUI;
-    public CobeControl movement;
-    public GameObject GameOver;
-    public GameObject pauseButton;
-    public GameObject player;
-    public Transform player2Tranf;
+    public GameObject completeLevelUI;	//Level complete panel
+    public CobeControl movement;		//Player movement script
+    public GameObject GameOver;			//Game over 
+    public GameObject pauseButton;		//Unused pause buttton
+    public GameObject player;			//The player cube
+    public Transform player2Tranf;		//Player duplicate used to reset the rotation
 
     //public Text attemptsText;
     #endregion
 
     private void FixedUpdate()
     {
+		//Check if player rotation (manly Y) is NOT equal to 0 and if so, reset it
         if (player.transform.rotation != player2Tranf.rotation && !gameHasEnded)
         {
             player.transform.rotation = player2Tranf.rotation;

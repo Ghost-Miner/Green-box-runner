@@ -5,20 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class ObstacleSpawn : MonoBehaviour
 {
-    [SerializeField] private GameObject obstacle;
-    [SerializeField] private Rigidbody obstacleRB;
+    [SerializeField] private GameObject obstacle;	//The obstacle object
+    [SerializeField] private Rigidbody obstacleRB;	//UNUSED, rigidbody of obstacle object , UNUSED
 
-    public Transform obstacleTransf;
+    public Transform obstacleTransf;				//obstacle transform component, UNUSED
 
-    public float roation;
+    public float roation;							//UNUSED
 
-    private int spawnObstacle;
-    public float forwardForce = 2000f; //how fast the player moves forward
-
+    private int spawnObstacle;						//Used for random generator
+    public float forwardForce = 2000f; 				//UNUSED
+	
     void Start()
     {
-        //obstacle.transform.rotation = obstacleTransf.rotation;
-
+        //obstacle.transform.rotation = obstacleTransf.rotation; 
+	
+		//RANDOM GENERATOR - Current change for obstacle spawning: 33%
+		//0 & 1 = disable obstacle
+		//2 	= keep obstacle enabled
         spawnObstacle = Random.Range(0, 3);
         //Debug.Log(Random.Range(0, 2));
 

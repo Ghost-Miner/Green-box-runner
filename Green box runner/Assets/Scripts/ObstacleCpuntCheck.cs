@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ObstacleCpuntCheck : MonoBehaviour
 {
+	//
+	// UNUSED SCRIPT
+	//
+	
     public static int obstacleCount;
 
     public GameObject obstacleSpawn;

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    [SerializeField] private Rigidbody obstacleRB;
+	//
+	// UNUSED SCRIPT - Used for testing obstacle moving instead of player - Used in "tests" scene
+	//
+	
+    [SerializeField] private Rigidbody obstacleRB; // Obstacle rigidbody
 
     public float forwardForce = 2000f; //how fast the player moves forward
 

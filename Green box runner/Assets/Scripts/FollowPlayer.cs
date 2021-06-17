@@ -2,8 +2,10 @@
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset;
+	//Used for the camera
+	
+    public Transform player;	//Player's transform component
+    public Vector3 offset;		//Camera offset
 
     void Update()
     {

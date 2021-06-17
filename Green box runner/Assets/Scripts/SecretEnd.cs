@@ -2,8 +2,11 @@
 
 public class SecretEnd : MonoBehaviour
 {
-
-    public GameManager gameManager;
+	//
+	// SORT OF UNUSED SCRIPT, Meant for secret end, currently it just displays a message in the console.
+	//
+	
+    public GameManager gameManager; //Gamemanager sciprt/object
 
     public void OnTriggerEnter()
     {

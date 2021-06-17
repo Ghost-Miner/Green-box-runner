@@ -2,8 +2,12 @@
 
 public class Tutorial : MonoBehaviour
 {
+	//
+	// THE TUTORIAL SCREEN DISPLAYED WHEN THE GAME IS STARTED
+	//	
+	
     public static bool TutorialClosed = false;
-    public GameObject TutorialUI;
+    public GameObject TutorialUI;				//Tutorial panel
 
     private void Start()
     {
@@ -16,6 +20,7 @@ public class Tutorial : MonoBehaviour
             TutorialUI.SetActive(true);
         }
     }
+	
     void Update()
     {
         if (TutorialClosed == false)
