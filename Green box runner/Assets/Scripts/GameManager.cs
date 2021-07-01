@@ -11,14 +11,14 @@ public class GameManager : MonoBehaviour
 	
     #region Variables
     bool gameHasEnded = false;
-
     public float restartDelay = 1f;
-    public GameObject completeLevelUI;	//Level complete panel
+
     public CobeControl movement;		//Player movement script
+    public Transform player2Tranf;		//Player duplicate used to reset the rotation
+    public GameObject completeLevelUI;	//Level complete panel
     public GameObject GameOver;			//Game over 
     public GameObject pauseButton;		//Unused pause buttton
     public GameObject player;			//The player cube
-    public Transform player2Tranf;		//Player duplicate used to reset the rotation
 
     //public Text attemptsText;
     #endregion
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         if (player.transform.rotation != player2Tranf.rotation && !gameHasEnded)
         {
             player.transform.rotation = player2Tranf.rotation;
-            Debug.Log("GAMEMANAGER: Resetting player rotation");
+            //Debug.Log("GAMEMANAGER: Resetting player rotation");
         }
     }
 

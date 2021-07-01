@@ -21,7 +21,8 @@ public class MainMenu : MonoBehaviour
     public void MoreGames()
     {
         Debug.Log("Opening link");
-        Application.OpenURL("https://ghost-miner.itch.io/");
+        Application.OpenURL("http://ghost-miner.itch.io");
+        
     }
     public void Options()
     {

@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AttemptsCount : MonoBehaviour
 {
     //
-	// SCRIPT STORING THE ATTEMPTS COUNT 
-	// Not destroyed on load object
-	//
-	
-	//public Text attemptsText;
+    // SCRIPT STORING THE ATTEMPTS COUNT 
+    // Not destroyed on load object
+    //
 
-    public static int attemptsCount;
-    public static int attemptsNum;
+    //public Text attemptsText;
 
-    public static AttemptsCount instance;
+    [HideInInspector] public static int attemptsCount;
+    [HideInInspector] public static int attemptsNum;
+    [HideInInspector] public static float highscore;
 
-    public int crashes;
+    [HideInInspector] public static AttemptsCount instance;
 
     private void Awake()
     {
@@ -34,29 +29,16 @@ public class AttemptsCount : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-		
-		//Reset values
+
+        //Reset values
+        highscore = 0;
         attemptsCount = 1;
         attemptsNum = 0;
 		
 		//Set this script not ti be destroyed on load
         DontDestroyOnLoad(gameObject);
     }
-	
-	//I think this is unused
-    private void DontDestroyOnLoad()
-    {
 
-        throw new NotImplementedException();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
 		//If current scene isn't Level_2, destroy this object

@@ -125,8 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2739966197057491365}
+  transf: {fileID: 2739966197057491366}
   forwardForce: 5500
   sidewaysForce: 100
+  sidewaysSnap: 15
+  player2Tranf: {fileID: 0}
 --- !u!114 &2739966197057491371
 MonoBehaviour:
   m_ObjectHideFlags: 0

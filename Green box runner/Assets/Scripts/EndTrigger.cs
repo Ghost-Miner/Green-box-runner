@@ -19,11 +19,10 @@ public class EndTrigger : MonoBehaviour
         {
             loadingPanel.SetActive(true);
 
-            score.score2 += 1000f;
+            score.levelEnded = true;
             score.levelNum += 1;
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //player.transform.position = new Vector3(0, 0.6f, 12);
         }
     }
 }
